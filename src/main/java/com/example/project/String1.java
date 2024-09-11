@@ -33,17 +33,17 @@ public class String1 {
         if (this.length() != s.length())
             return false;
         
-        for (int i = 0; i < size; i++) {
-            if (s.getChar(i) != str[i]) {
+        for (int i = 0; i < this.length(); i++) {
+            if (s.getChar(i) != this.getChar(i)) {
                 return false;
             }
         }
         return true;
     }
     public void reverse() {
-        for (int i = 0; i < size / 2; i++) {
-            char temp = str[size - i - 1];
-            str[size -i - 1] = str[i];
+        for (int i = 0; i < this.length() / 2; i++) {
+            char temp = this.getChar(this.length() - i - 1);
+            str[this.length() -i - 1] = str[i];
             str[i] = temp;
         }
     }
