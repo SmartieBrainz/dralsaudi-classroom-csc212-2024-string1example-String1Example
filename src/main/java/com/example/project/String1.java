@@ -30,6 +30,9 @@ public class String1 {
             append(s.getChar(i));
     }
     public boolean equal(String1 s) {
+        if (this.length() != s.length())
+            return false;
+        
         for (int i = 0; i < size; i++) {
             if (s.getChar(i) != str[i]) {
                 return false;
@@ -38,7 +41,7 @@ public class String1 {
         return true;
     }
     public void reverse() {
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size / 2; i++) {
             char temp = str[size - i - 1];
             str[size -i - 1] = str[i];
             str[i] = temp;

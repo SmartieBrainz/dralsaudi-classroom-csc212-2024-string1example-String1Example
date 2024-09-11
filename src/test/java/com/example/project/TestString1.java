@@ -1,7 +1,6 @@
 package com.example.project;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
 
 public class TestString1 {
@@ -45,6 +44,7 @@ public class TestString1 {
       s.append('b');
       s.append('c');
       s.reverse();
+      System.out.println(s + " reversed string");
       s.remove();
       assertEquals(2, s.length());
       assertEquals('c', s.getChar(0));
